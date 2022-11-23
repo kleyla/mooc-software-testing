@@ -14,6 +14,13 @@ public class RomanNumeralTest {
     }
 
     @Test
+    public void singleNumberM() {
+        RomanNumeral roman = new RomanNumeral();
+        int result = roman.convert("M");
+        Assertions.assertEquals(1000, result);
+    }
+
+    @Test
     public void numberWithManyDigits() {
         RomanNumeral roman = new RomanNumeral();
         int result = roman.convert("VIII");

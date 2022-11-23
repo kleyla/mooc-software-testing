@@ -20,6 +20,12 @@ public class RomanNumeralTestWithBeforeEach {
     }
 
     @Test
+    public void singleNumberV() {
+        int result = roman.convert("V");
+        Assertions.assertEquals(5, result);
+    }
+
+    @Test
     public void numberWithManyDigits() {
         int result = roman.convert("VIII");
         Assertions.assertEquals(8, result);
