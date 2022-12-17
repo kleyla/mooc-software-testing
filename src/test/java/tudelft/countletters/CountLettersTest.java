@@ -20,7 +20,7 @@ public class CountLettersTest {
     @Test
     public void lastWordDoesNotMatch1() {
         int words = new CountLetters().count("cats|dog|");
-        Assertions.assertEquals(2, words);
+        Assertions.assertEquals(1, words);
     }
 
 }
