@@ -62,3 +62,89 @@ or line coverage, for that matter!
 Path coverage means that we want to really test all the possible paths and combinations
 
 ### Modified Condition / Decision Coverage
+
+## Testability and Mock Objects
+
+### Unit and System testing
+
+Unit tests search for defects in and verifies the functioning of software items. For example, modules, programs, objects, classes, etc., that are separately testable.
+
+### Integration testing
+
+Unit tests, meaning we were testing one unit isolated from the rest, and the other extreme was system test, or black box test,
+
+Cuando una clase interactua con una base de datos y queremos testear esto.. eso seria una prueba de integracion
+
+ISQTB: defines Integration tests when you test interfaces between components, interactions to different parts of a system such as OS, file system, hardware, or interface between systems.
+
+### Testing pyramid
+
+<img src="./assets/testing-pyramid.png" width=400 />
+
+However, one thing that we see in practice is people doing what we call the ice cream cone test, which is the testing pyramid, but the other way around.
+They do just a small number of unit tests, they do a lot of system tests and they do a lot of manual tests.
+You should avoid doing this ice cream cone way of testing.
+You should focus more on the testing pyramid.
+
+### Hard-to-test dependencies
+
+### Mock objects
+
+This simulation in software testing, we call it a mock object. So when we say, we're gonna mock some object, we're saying we're gonna create a simulation of a specific class, just for the sake of testability
+
+#### Controllability and Observability
+
+In other words, controllability is about how easy it is for us to provide inputs and invoke the behaviour that we want in the system under test. Observability is about how easy it is for us to observe the system under test in order to verify whether the system behaved as expected.
+
+### Design for testability
+
+#### Principles of Testable Architectures
+
+#### Dependency Injection
+
+## Test code smells
+
+Existen patrones para hacer tests unitarios
+
+### FIRST properties of good tests
+
+- FAST: should be fast
+- Isolated: we want our test to test an isolated piece of functionality, and good unit tests usually focus on a small chunks of code.
+- Repeatable: We don't want tests that pass sometimes and fail some other times.
+- Self-validating:
+- Timely: You need to make sure that automated testing becomes a habit.
+
+### Code smells
+
+- Duplicated code
+- Assetion roulette
+- Slow tests
+- Resource optimism
+- Test run war
+- General fixture
+- Indirect tests
+- Sensitive equality
+
+### Flaky tests
+
+Sometimes it passes, sometimes it fails...? We call them flaky tests.
+
+Reasons:
+
+- you have a test that depends on an external infrastructure, like a database or a web service.
+- developers are sharing resources, some other person changes the database, and this affects your tests.
+- you have time-outs, Your test is waiting for something to happen in the web application, The web application, for some reason, gets one second slower, and then your test fails because of that.
+- you have interacting tests. So, test one, for some reason, interacts with test two, and vice-versa.
+
+### Test readability
+
+- Arrange
+- Act
+- Assert
+
+No tener valores magicos, sino mas bien tenerlos en variables con nombres entendibles
+
+### Flakiness decision table
+
+<img src="./assets/decision-table.png" width=500 />
+###
